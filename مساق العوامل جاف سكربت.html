@@ -1,0 +1,148 @@
+get non secured ,
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جافا سكربت  مساق العوامل </title>
+    <style>
+   body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 10px 20px;
+            text-align: justify;
+        }
+        ul {
+            margin: 10px 40px;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* تنسيق الروابط */
+        a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* قسم التنزيل */
+        .download-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .download-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .download-link:hover {
+            background: linear-gradient(90deg, #2575fc, #6a11cb);
+            transform: scale(1.1);
+        }
+
+        /* تنسيق صندوق الكود */
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            margin: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            text-align: center;
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 10px 0;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+ 
+     <!-- العوامل المنطقية -->
+     <h3>العوامل المنطقية في جافا سكربت:</h3>
+     <p>العوامل المنطقية تُستخدم لاتخاذ قرارات بناءً على القيم الحقيقية (true) أو الخاطئة (false). من العوامل الشائعة:</p>
+     <ul>
+         <li><code>&&</code> (AND): يكون الناتج true إذا كانت جميع الشروط true.</li>
+         <li><code>||</code> (OR): يكون الناتج true إذا تحقق شرط واحد على الأقل.</li>
+         <li><code>!</code> (NOT): يعكس القيمة (true تصبح false والعكس صحيح).</li>
+     </ul>
+     <h3>أمثلة:</h3>
+     <pre>
+         let isAdult = true;
+         let hasPermission = false;
+ 
+         // عامل AND
+         console.log(isAdult && hasPermission); // false
+ 
+         // عامل OR
+         console.log(isAdult || hasPermission); // true
+ 
+         // عامل NOT
+         console.log(!isAdult); // false
+     </pre>
+ 
+     <!-- العوامل الرياضية -->
+     <h3>العوامل الرياضية في جافا سكربت:</h3>
+     <p>تُستخدم العوامل الرياضية لإجراء العمليات الحسابية. من أشهرها:</p>
+     <ul>
+         <li><code>+</code>: الجمع.</li>
+         <li><code>-</code>: الطرح.</li>
+         <li><code>*</code>: الضرب.</li>
+         <li><code>/</code>: القسمة.</li>
+         <li><code>%</code>: باقي القسمة.</li>
+         <li><code>**</code>: الأس (الرفع إلى القوة).</li>
+     </ul>
+     <h3>أمثلة:</h3>
+     <pre>
+         let x = 10;
+         let y = 3;
+ 
+         console.log(x + y); // 13
+         console.log(x - y); // 7
+         console.log(x * y); // 30
+         console.log(x / y); // 3.333...
+         console.log(x % y); // 1
+         console.log(x ** y); // 1000 (10^3)
+     </pre>
+</body>
+</html>
