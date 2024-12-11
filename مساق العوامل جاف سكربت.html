@@ -144,5 +144,57 @@
          console.log(x % y); // 1
          console.log(x ** y); // 1000 (10^3)
      </pre>
+
+    <h1>JavaScript Examples</h1>
+
+    <h2>Concatenation (الدمج)</h2>
+    <p id="concatenation"></p>
+
+    <h2>Assignment Operators (عوامل الإسناد)</h2>
+    <p id="assignment"></p>
+
+    <h2>Comparison Operators (عوامل المقارنة)</h2>
+    <p id="comparison"></p>
+
+    <h2>Equality Operators (عوامل المساواة)</h2>
+    <p id="equality"></p>
+
+    <script>
+        // 1. Concatenation Example
+        let greeting = 1 + 1 + 'Hello' + (1 + 5); // النتيجة: '2Hello6'
+        document.getElementById('concatenation').innerText = "Result: " + greeting;
+
+        // 2. Assignment Operators Examples
+        let x = 8;
+        let assignmentResults = "";
+        x += 2; // x = x + 2
+        assignmentResults += "x += 2: " + x + "\n";
+        x -= 2; // x = x - 2
+        assignmentResults += "x -= 2: " + x + "\n";
+        x *= 2; // x = x * 2
+        assignmentResults += "x *= 2: " + x + "\n";
+        x /= 2; // x = x / 2
+        assignmentResults += "x /= 2: " + x + "\n";
+        document.getElementById('assignment').innerText = assignmentResults;
+
+        // 3. Comparison Operators Examples
+        let age = 12;
+        let comparisonResults = "";
+        comparisonResults += "Equal (===): " + (age === 12) + "\n";
+        comparisonResults += "Not Equal (!==): " + (age !== 12) + "\n";
+        comparisonResults += "Larger (>): " + (age > 12) + "\n";
+        comparisonResults += "Larger or Equal (>=): " + (age >= 12) + "\n";
+        comparisonResults += "Less (<): " + (age < 12) + "\n";
+        comparisonResults += "Less or Equal (<=): " + (age <= 12) + "\n";
+        document.getElementById('comparison').innerText = comparisonResults;
+
+        // 4. Equality Operators Examples
+        let equalityResults = "";
+        equalityResults += "1 === '1': " + (1 === '1') + "\n"; // Strict equality (false)
+        equalityResults += "1 == '1': " + (1 == '1') + "\n";   // Loose equality (true)
+        equalityResults += "true == 1: " + (true == 1) + "\n"; // Loose equality (true)
+        document.getElementById('equality').innerText = equalityResults;
+    </script>
+
 </body>
 </html>
