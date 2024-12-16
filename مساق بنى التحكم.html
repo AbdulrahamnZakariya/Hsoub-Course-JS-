@@ -229,7 +229,48 @@ console.log('It is a regular day.');
             alert('حدث خطأ أثناء نسخ الكود.');
         });
     }
+    
 </script>
+<h2>حلقات التكرار (For Loop)</h2>
+<p>حلقات التكرار تُستخدم لتكرار تنفيذ جزء معين من الكود لعدد معين من المرات. يُمكنك استخدامها لتكرار العمليات حتى تتحقق شرط معين. إحدى أشهر أنواع الحلقات هي حلقة <strong>for</strong>.</p>
+<p><strong>هيكل حلقة for:</strong></p>
+<pre>
+for (initialization; condition; increment/decrement) {
+    // الكود المراد تكراره
+}
+</pre>
+<p>فيما يلي أمثلة على استخدام حلقات <strong>for</strong>:</p>
+
+<h3>مثال 1: طباعة الأرقام الزوجية من 1 إلى 10</h3>
+<pre>
+for (let i = 1; i <= 10; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+</pre>
+
+<h3>مثال 2: مضاعفات رقم معين</h3>
+<pre>
+let num = 4;
+for (let i = 1; i < 10; i++) {
+    console.log(num * i);
+}
+</pre>
+
+<h3>مثال 3: حلقة متداخلة لطباعة القيم</h3>
+<pre>
+for (let i = 0; i < 5; i++) {
+    for (let j = 1; j < 4; j++) {
+        console.log(j);
+    }
+}
+</pre>
+
+<h3>ملاحظة:</h3>
+<p>تُستخدم حلقة <strong>for</strong> بشكل أساسي عند معرفة عدد مرات التكرار المطلوب مسبقًا.</p>
+
+
 
 </body>
 </html>
