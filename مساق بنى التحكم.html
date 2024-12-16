@@ -104,16 +104,20 @@
 <h3>التفرعات الشرطية (Conditional Statements)</h3>
 <p>التفرعات الشرطية تُمكّن البرنامج من اتخاذ قرارات بناءً على شروط معينة.</p>
 <h3>مثال:</h3>
-<pre>
-    let age = 12;
-    if (age > 14) {
-        console.log('Age is above 14');
-    } else if (age > 10) {
-        console.log('Age is above 10');
-    } else {
-        console.log('Age is under or equal to 10');
-    }
-</pre>
+<div style="position: relative;">
+    <pre id="example-code">
+        let age = 12;
+        if (age > 14) {
+            console.log('Age is above 14');
+        } else if (age > 10) {
+            console.log('Age is above 10');
+        } else {
+            console.log('Age is under or equal to 10');
+        }
+    </pre>
+    <button onclick="copyCode('example-code')" style="position: absolute; top: 10px; right: 10px;">نسخ الكود</button>
+</div>
+
 
 <h3>التعبير الشرطي (Conditional Expressions)</h3>
 <p>التعبير الشرطي يُستخدم لاتخاذ قرارات متعددة بناءً على شروط مختلفة.</p>
@@ -140,7 +144,92 @@
     console.log(repeat > 0 ? 'Sorry, you can\'t repeat.' : 'You can try again.');
 </pre>
 
+
+<h2>ما هي جملة السويتش؟</h2>
+<p>جملة <strong>switch</strong> تُستخدم لاتخاذ قرارات بناءً على قيمة معينة. تُعتبر بديلاً لجملة <strong>if-else</strong> عندما يكون هناك عدة حالات.</p>
+
+<h2>أمثلة على السويتش</h2>
+
+<h3>مثال 1: الأيام في الأسبوع</h3>
+<p>هذا المثال يوضح كيفية استخدام <strong>switch</strong> لمعرفة رسالة اليوم.</p>
+<pre>
+let day = 'Monday';
+
+switch (day) {
+case 'Monday':
+    console.log('Start the week!');
+    break;
+case 'Friday':
+    console.log('Weekend is near!');
+    break;
+case 'Sunday':
+    console.log('Time to relax!');
+    break;
+default:
+    console.log('It is a regular day.');
+}
+</pre>
+
+<h3>مثال 2: الفصول الدراسية</h3>
+<p>استخدام <strong>switch</strong> لتحديد الفصل الدراسي الحالي بناءً على الشهر.</p>
+<pre>
+let month = 4; // أبريل
+
+switch (month) {
+case 1:
+case 2:
+case 3:
+    console.log('Winter Semester');
+    break;
+case 4:
+case 5:
+case 6:
+    console.log('Spring Semester');
+    break;
+case 9:
+case 10:
+case 11:
+    console.log('Fall Semester');
+    break;
+default:
+    console.log('Summer Break');
+}
+</pre>
+
+<h2>الفرق بين switch و if-else</h2>
+<p>إليك الفرق بين <strong>switch</strong> و<strong>if-else</strong>:</p>
+<ul>
+    <li><strong>switch:</strong> يُفضل استخدامه عند وجود قيمة واحدة يتم مقارنتها بعدة حالات.</li>
+    <li><strong>if-else:</strong> أكثر مرونة للحالات المعقدة مثل استخدام عمليات المقارنة (<، >) أو العمليات المنطقية (&&، ||).</li>
+</ul>
+
+<h3>مثال باستخدام if-else:</h3>
+<pre>
+let day = 'Monday';
+
+if (day === 'Monday') {
+console.log('Start the week!');
+} else if (day === 'Friday') {
+console.log('Weekend is near!');
+} else if (day === 'Sunday') {
+console.log('Time to relax!');
+} else {
+console.log('It is a regular day.');
+}
+</pre>
+
   
+<script>
+    function copyCode(elementId) {
+        const codeElement = document.getElementById(elementId);
+        const codeText = codeElement.innerText;
+        navigator.clipboard.writeText(codeText).then(() => {
+            alert('تم نسخ الكود بنجاح!');
+        }).catch(err => {
+            alert('حدث خطأ أثناء نسخ الكود.');
+        });
+    }
+</script>
 
 </body>
 </html>
