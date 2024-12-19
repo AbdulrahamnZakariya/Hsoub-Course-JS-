@@ -23,6 +23,15 @@
             font-size: 2.5em;
             margin-top: 20px;
         }
+        @media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    pre {
+        font-size: 12px;
+    }
+}
+
         h2 {
             font-size: 2em;
             margin-top: 30px;
@@ -97,7 +106,13 @@
     </style>
 </head>
 <body>
- 
+    <button onclick="copyCode('example-code')" style="position: absolute; top: 10px; right: 10px;">
+        <span>copy code
+        </span> 📋
+    </button>
+   
+    
+    
     <!-- بُنى التحكم -->
 <h2>بُنى التحكم (Control Structures)</h2>
 
@@ -143,6 +158,14 @@
     let repeat = 1;
     console.log(repeat > 0 ? 'Sorry, you can\'t repeat.' : 'You can try again.');
 </pre>
+<div class="quiz-section">
+    <h3>ما هي نتيجة الشرط التالي؟</h3>
+    <pre>
+    let x = 5;
+    let result = x > 3 ? "Yes" : "No";
+    </pre>
+    <button onclick="alert('الإجابة الصحيحة: Yes')">عرض الإجابة</button>
+</div>
 
 
 <h2>ما هي جملة السويتش؟</h2>
@@ -347,9 +370,95 @@ for (let i = names.length - 1; i >= 0; i--) {
 console.log(i, names[i]);
 }
 </pre>
+
+<h2>أمثلة على حلقات for...of</h2>
+<h3>مثال: استعراض عناصر مصفوفة باستخدام for...of</h3>
+<pre>
+const number2 = [4, 20, 30, 50];
+for (let value of number2) {
+    console.log(value); // طباعة كل عنصر في المصفوفة.
+}
+</pre>
+
+<h2>أمثلة على استخدام break و continue</h2>
+<h3>مثال: استخدام break للخروج من حلقة</h3>
+<pre>
+let a = 0;
+while (a < 10) {
+    a++;
+    if (a === 3) break; // الخروج من الحلقة عندما تصل القيمة إلى 3.
+    console.log(a);
+}
+</pre>
+
+<h3>مثال: استخدام continue لتخطي الدورة الحالية</h3>
+<pre>
+let s = 0;
+while (s < 10) {
+    s++;
+    if (s % 2 !== 0) continue; // تخطي القيم الفردية.
+    console.log(s); // طباعة القيم الزوجية فقط.
+}
+</pre>
+
+<h2>أمثلة على جمع القيم في مصفوفة</h2>
+<h3>مثال: جمع عناصر مصفوفة باستخدام for</h3>
+<pre>
+let cart = [20, 10, 30, 40, 41];
+let total = 0;
+for (let i = 0; i < cart.length; i++) {
+    total += cart[i]; // جمع كل العناصر.
+}
+console.log(total); // طباعة المجموع النهائي.
+</pre>
+
+<h3>مثال: جمع عناصر مصفوفة باستخدام for...of</h3>
+<pre>
+let cart0 = [20, 10, 30, 40, 41];
+let total0 = 0;
+for (let item of cart0) {
+    total0 += item; // جمع كل العناصر.
+}
+console.log(total0); // طباعة المجموع النهائي.
+</pre>
+
+<h2>أمثلة على استخراج عناصر نصية من مصفوفة</h2>
+<h3>مثال: طباعة النصوص فقط من مصفوفة مختلطة</h3>
+<pre>
+const data = [5, 'hello', true, 'world', false, 2];
+for (let i = 0; i < data.length; i++) {
+    if (typeof data[i] === 'string') console.log(data[i]); // طباعة النصوص فقط.
+}
+</pre>
+
+<h2>أمثلة على طباعة نجوم مثلث</h2>
+<h3>مثال: إنشاء مثلث نجوم باستخدام حلقة متداخلة</h3>
+<pre>
+let rows = prompt("Enter rows count ");
+for (let i = 0; i <= rows; i++) {
+    let stars = '';
+    for (let y = 0; y < i; y++) {
+        stars += '*'; // إضافة النجمة في كل دورة.
+    }
+    console.log(stars); // طباعة السطر المكتمل.
+}
+</pre>
+
+<h3>اختبر معرفتك</h3>
+<p>ما هي نتيجة المثال التالي؟</p>
+<pre>
+let x = 10;
+let result = x % 2 === 0 ? "Even" : "Odd";
+console.log(result);
+</pre>
+<button onclick="alert('الإجابة الصحيحة: Even')">عرض الإجابة</button>
+
 <script src="abd.js">
     
 </script>
 
 </body>
 </html>
+
+
+
